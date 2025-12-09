@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_stock_count_sessions" action="action_stock_count_session" parent="stock.menu_stock_adjustments" sequence="10"/>
+    <menuitem id="menu_stock_count_lines" action="action_stock_count_line" parent="stock.menu_stock_adjustments" sequence="20"/>
+
+</odoo>
