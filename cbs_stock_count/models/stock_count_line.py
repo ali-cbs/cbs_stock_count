@@ -139,9 +139,10 @@ class StockCountLine(models.Model):
                 line.variant_percentage_value = round(percentage, 2)
             else:
                 # System qty is zero
-                if abs(line.qty_difference) > 0.001:
+                if abs(line.qty_difference) > 0:
                     line.variant_percentage_value = 100.0
                 else:
                     line.variant_percentage_value = 0.0
+
 
 
