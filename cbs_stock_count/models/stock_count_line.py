@@ -134,7 +134,7 @@ class StockCountLine(models.Model):
             line.count_net_difference_value = line.qty_difference * cost
 
             # 3. Variance percentage
-            if line.qty_system and abs(line.qty_system) > 0.001:
+            if line.qty_system and abs(line.qty_system) > 0:
                 percentage = (abs(line.qty_difference) / abs(line.qty_system)) * 100.0
                 line.variant_percentage_value = round(percentage, 2)
             else:
@@ -143,4 +143,5 @@ class StockCountLine(models.Model):
                     line.variant_percentage_value = 100.0
                 else:
                     line.variant_percentage_value = 0.0
+
 
